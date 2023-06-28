@@ -13,7 +13,7 @@
     const onibus = transporte*2;
 
     //Processamento
-    (carro>onibus)? alert(`É mais barato ir pelo transporte público. ValorR$${onibus}`) : alert(`É mais barato ir pelo seu meio de transporte. Valor R$${carro}`);
+    (carro>onibus)? alert(`É mais barato ir pelo transporte público. ValorR$${onibus.toFixed(2).replace(".",",")}`) : alert(`É mais barato ir pelo seu meio de transporte. Valor R$${carro.toFixed(2).replace(".",",")}`);
     
     //Saída
 
