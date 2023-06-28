@@ -8,10 +8,18 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
-
+    const produto = Number(prompt(`Insira o valor do produto.`).trim().replace(",","."));
 
     //Processamento
-
+    const valor280 = [produto*20]/100;
+    const valor700 = [produto*15]/100;
+    const valor1500 = [produto*10]/100;
+    const valorMaior = [produto*5]/100;
+    (produto <= 280)? alert(`O preço com aumento fica R$${produto+valor280.toFixed(2).replace(".",".")}`)
+    :(produto <= 700)? alert(`O preço com aumento fica R$${produto+valor700.toFixed(2).replace(".",".")}`)
+    :(produto <= 1500)? alert(`O preço com aumento fica R$${produto+valor1500.toFixed(2).replace(".",".")}`)
+    :(produto > 1500)? alert(`O preço com aumento fica R$${produto+valorMaior.toFixed(2).replace(".",".")}`)
+    : alert(`Valor inválido!`);
     
     //Saída
 
