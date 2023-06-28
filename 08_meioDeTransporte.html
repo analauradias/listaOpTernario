@@ -9,9 +9,11 @@
     const preco = Number(prompt(`Informe o preço do litro do combustível`).trim().replace(",","."));
     const litros = Number(prompt(`Informe quantos litros são gastos diariamente para ir ao trabalho`).trim().replace(",","."));
     const transporte = Number(prompt(`Qual o preço do transporte público para ir ao trabalho diariamente?`).trim().replace(",","."));
+    const carro = preco*litros;
+    const onibus = transporte*2;
 
     //Processamento
-
+    (carro>onibus)? alert(`É mais barato ir pelo transporte público. ValorR$${onibus}`) : alert(`É mais barato ir pelo seu meio de transporte. Valor R$${carro}`);
     
     //Saída
 
