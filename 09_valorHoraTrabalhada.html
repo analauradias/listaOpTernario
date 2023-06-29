@@ -8,10 +8,17 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
+    const horas = Number(prompt(`Quantas horas você trabalha semanalmente?`).trim());
+    const salario = Number(prompt(`Quanto você recebe por hora trabalhada?`).trim().replace(",","."));
 
-
+    const totalSalario = horas*salario;
+    const adicional20 = ((totalSalario*20)/100)+totalSalario;
+    const adicional30 = ((totalSalario*30)/100)+totalSalario;
     //Processamento
-
+    (horas<=45)? alert(`Valor do salário não alterado`)
+    : (horas<=60)? alert(`Seu salário fica R$${adicional20.toFixed(2).replace(".",",")}`)
+    : (horas>60)? alert(`Seu salário fica R$${adicional30.toFixed(2).replace(".",",")}`)
+    : alert (`Valor inválido`);
     
     //Saída
 

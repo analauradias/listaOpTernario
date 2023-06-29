@@ -7,13 +7,21 @@
     // - Conta de telefone
     // - Supermercado
     // Também peça para o usuário informar o valor que recebe de remuneração mensal (salário), proveniente da sua atuação profissional.
-    // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
+    // Verifique se o usuário gasta mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou 
+    //quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
+    const agua = Number(prompt(`Quanto é gasto com água?`).trim().replace(",","."));
+    const energia = Number(prompt(`Quanto é gasto com energia elétrica?`).trim().replace(",","."));
+    const telefone = Number(prompt(`Quanto é gasto com telefone?`).trim().replace(",","."));
+    const mercado = Number(prompt(`Quanto é gasto com supermercado?`).trim().replace(",","."));
+    const salario = Number(prompt(`Qual o valor do seu salário?`).trim().replace(",","."));
 
-
+    const contas = agua+energia+telefone+mercado;
     //Processamento
-
+    (salario>contas)? alert(`Sobrou R$${(salario-contas).toFixed(2).replace(".",",")}`) 
+     : (salario<contas)? alert(`Faltou R$${(contas-salario).toFixed(2).replace(".",",")}`)
+     :alert (`Não sobrou nem faltou dinheiro para pagar as despesas`);
     
     //Saída
     
